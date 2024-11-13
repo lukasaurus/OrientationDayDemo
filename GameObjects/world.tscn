@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bho85enjsobvo" path="res://Sprites/Tilesets/tileset_desert.png" id="5_5v3hi"]
 [ext_resource type="Texture2D" uid="uid://djpa650wixrpb" path="res://Sprites/Tilesets/tileset_dirt.png" id="6_i5wul"]
 [ext_resource type="PackedScene" uid="uid://c7x1ihby3bwi7" path="res://GameObjects/Player.tscn" id="7_e44bt"]
-[ext_resource type="PackedScene" uid="uid://ddikh0bxna6pp" path="res://GameObjects/spikes.tscn" id="12_8nesk"]
-[ext_resource type="PackedScene" uid="uid://bn8rqeq0bl7q2" path="res://GameObjects/coin.tscn" id="13_0jlwj"]
+[ext_resource type="PackedScene" uid="uid://ddikh0bxna6pp" path="res://Placeables/spikes.tscn" id="12_8nesk"]
+[ext_resource type="PackedScene" uid="uid://bn8rqeq0bl7q2" path="res://Placeables/coin.tscn" id="13_0jlwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijchp"]
 texture = ExtResource("1_rxviq")
