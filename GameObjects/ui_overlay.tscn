@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://6hcus6pssji5"]
+
+[ext_resource type="Script" path="res://ui_overlay.gd" id="1_ves6w"]
+[ext_resource type="Texture2D" uid="uid://cgqlhqw6jx1ub" path="res://Sprites/UI/coin.png" id="2_yhdq2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qfi0"]
+atlas = ExtResource("2_yhdq2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3aui"]
+atlas = ExtResource("2_yhdq2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilmel"]
+atlas = ExtResource("2_yhdq2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdkte"]
+atlas = ExtResource("2_yhdq2")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6ts4"]
+atlas = ExtResource("2_yhdq2")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krob5"]
+atlas = ExtResource("2_yhdq2")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_br40f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qfi0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3aui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilmel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdkte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6ts4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krob5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UIOverlay" type="CanvasLayer"]
+script = ExtResource("1_ves6w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_br40f")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="AnimatedSprite2D"]
+offset_left = 8.0
+offset_top = -13.0
+offset_right = 48.0
+offset_bottom = 10.0
+text = "x0"
