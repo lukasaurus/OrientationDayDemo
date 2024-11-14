@@ -420,6 +420,7 @@ script = ExtResource("1_u37h6")
 scroll_scale = Vector2(0.2, 0)
 repeat_size = Vector2(256, 0)
 repeat_times = 3
+metadata/_edit_lock_ = true
 
 [node name="DesertA" type="Sprite2D" parent="Parallax2D2"]
 position = Vector2(172, 133.5)
@@ -434,6 +435,7 @@ texture = ExtResource("3_kcv7g")
 scroll_scale = Vector2(0.5, 0)
 repeat_size = Vector2(256, 0)
 repeat_times = 3
+metadata/_edit_lock_ = true
 
 [node name="Clouds" type="Sprite2D" parent="Parallax2D"]
 modulate = Color(1, 1, 1, 0.243137)
@@ -453,12 +455,14 @@ limit_left = 0
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_uenjj")
 
 [node name="KillZone" type="Area2D" parent="."]
 position = Vector2(0, 761)
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(3, -194)
