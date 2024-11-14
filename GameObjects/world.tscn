@@ -446,6 +446,7 @@ tile_set = SubResource("TileSet_ia2qu")
 
 [node name="Player" parent="." instance=ExtResource("7_e44bt")]
 position = Vector2(47, 161)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
