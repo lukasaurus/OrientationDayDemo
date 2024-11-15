@@ -426,10 +426,12 @@ metadata/_edit_lock_ = true
 position = Vector2(172, 133.5)
 scale = Vector2(2.52344, 2.10156)
 texture = ExtResource("2_2yy3y")
+metadata/_edit_lock_ = true
 
 [node name="Mountains" type="Sprite2D" parent="Parallax2D2"]
 position = Vector2(127, 230)
 texture = ExtResource("3_kcv7g")
+metadata/_edit_lock_ = true
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.5, 0)
@@ -459,6 +461,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_uenjj")
+metadata/_edit_lock_ = true
 
 [node name="KillZone" type="Area2D" parent="."]
 position = Vector2(0, 761)
@@ -467,6 +470,7 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(3, -194)
 shape = SubResource("WorldBoundaryShape2D_s2shr")
+metadata/_edit_lock_ = true
 
 [node name="Spikes" parent="." instance=ExtResource("12_8nesk")]
 position = Vector2(144, 192)
