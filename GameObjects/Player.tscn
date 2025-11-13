@@ -1,9 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://c7x1ihby3bwi7"]
 
-[ext_resource type="Script" path="res://GameObjects/player.gd" id="1_ocews"]
+[ext_resource type="Script" uid="uid://olit84s16ygu" path="res://GameObjects/player.gd" id="1_ocews"]
 [ext_resource type="Texture2D" uid="uid://dk4qdfnkppsvr" path="res://Sprites/Enemies/bear_brown.png" id="2_l80gu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1aqhj"]
+radius = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d4o76"]
 atlas = ExtResource("2_l80gu")
@@ -76,6 +77,7 @@ animations = [{
 script = ExtResource("1_ocews")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_1aqhj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
