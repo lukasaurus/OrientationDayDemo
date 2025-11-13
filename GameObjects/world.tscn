@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cilyqcjj7kd1l"]
+[gd_scene load_steps=22 format=4 uid="uid://cilyqcjj7kd1l"]
 
 [ext_resource type="Texture2D" uid="uid://b0hey8nnwrxc" path="res://Sprites/Backgrounds/clouds.png" id="1_nj8ks"]
 [ext_resource type="Texture2D" uid="uid://eb8n6mo18py6" path="res://Sprites/Tilesets/tileset_forest.png" id="1_rxviq"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bho85enjsobvo" path="res://Sprites/Tilesets/tileset_desert.png" id="5_5v3hi"]
 [ext_resource type="Texture2D" uid="uid://djpa650wixrpb" path="res://Sprites/Tilesets/tileset_dirt.png" id="6_i5wul"]
 [ext_resource type="PackedScene" uid="uid://c7x1ihby3bwi7" path="res://GameObjects/Player.tscn" id="7_e44bt"]
+[ext_resource type="PackedScene" uid="uid://qkbq3xwko3kp" path="res://Placeables/goal.tscn" id="14_3u4xq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijchp"]
 texture = ExtResource("1_rxviq")
@@ -472,5 +473,8 @@ metadata/_edit_lock_ = true
 position = Vector2(3, -194)
 shape = SubResource("WorldBoundaryShape2D_s2shr")
 metadata/_edit_lock_ = true
+
+[node name="Goal" parent="." instance=ExtResource("14_3u4xq")]
+position = Vector2(107, 180)
 
 [connection signal="body_entered" from="KillZone" to="Player" method="_on_area_2d_body_entered"]
