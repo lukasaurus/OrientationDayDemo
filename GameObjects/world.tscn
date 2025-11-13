@@ -457,6 +457,7 @@ metadata/_edit_group_ = true
 [node name="Camera2D" type="Camera2D" parent="Player"]
 limit_left = 0
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 metadata/_edit_lock_ = true
