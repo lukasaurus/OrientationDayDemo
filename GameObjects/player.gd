@@ -6,7 +6,7 @@ class_name Player
 var jumps_remaining = 2
 
 var SPEED = speed * 100
-var JUMP_POWER = -jump_power * 100
+var JUMP_VELOCITY = -jump_power * 100
 var ACCELERATION = acceleration
 
 func _physics_process(delta: float) -> void:

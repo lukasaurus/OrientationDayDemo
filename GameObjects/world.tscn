@@ -450,8 +450,6 @@ tile_set = SubResource("TileSet_ia2qu")
 
 [node name="Player" parent="." instance=ExtResource("7_e44bt")]
 position = Vector2(32, 163)
-SPEED = 3.0
-JUMP_VELOCITY = 3.0
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
