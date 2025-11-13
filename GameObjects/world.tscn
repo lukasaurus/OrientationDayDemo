@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=4 uid="uid://cilyqcjj7kd1l"]
+[gd_scene load_steps=25 format=4 uid="uid://cilyqcjj7kd1l"]
 
 [ext_resource type="Texture2D" uid="uid://b0hey8nnwrxc" path="res://Sprites/Backgrounds/clouds.png" id="1_nj8ks"]
 [ext_resource type="Texture2D" uid="uid://eb8n6mo18py6" path="res://Sprites/Tilesets/tileset_forest.png" id="1_rxviq"]
-[ext_resource type="Script" path="res://GameObjects/world.gd" id="1_u37h6"]
+[ext_resource type="Script" uid="uid://dt3x2n56t2vre" path="res://GameObjects/world.gd" id="1_u37h6"]
 [ext_resource type="Texture2D" uid="uid://c0vx64cjgani5" path="res://Sprites/Backgrounds/desert_a.png" id="2_2yy3y"]
 [ext_resource type="Texture2D" uid="uid://uvs8hvlmj3e" path="res://Sprites/Tilesets/tileset_lava.png" id="2_poues"]
 [ext_resource type="Texture2D" uid="uid://cd1e567qehros" path="res://Sprites/Tilesets/tileset_snow.png" id="3_3xipo"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c7x1ihby3bwi7" path="res://GameObjects/Player.tscn" id="7_e44bt"]
 [ext_resource type="PackedScene" uid="uid://ddikh0bxna6pp" path="res://Placeables/spikes.tscn" id="12_8nesk"]
 [ext_resource type="PackedScene" uid="uid://bn8rqeq0bl7q2" path="res://Placeables/coin.tscn" id="13_0jlwj"]
+[ext_resource type="PackedScene" uid="uid://qkbq3xwko3kp" path="res://GameObjects/goal.tscn" id="14_3u4xq"]
+[ext_resource type="Script" uid="uid://bwpxb2igj88rm" path="res://GameObjects/goal.gd" id="15_udvfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijchp"]
 texture = ExtResource("1_rxviq")
@@ -482,4 +484,9 @@ position = Vector2(96, 168)
 position = Vector2(496, 184)
 rotation = -1.58692
 
+[node name="Goal" parent="." instance=ExtResource("14_3u4xq")]
+position = Vector2(667, 183)
+script = ExtResource("15_udvfu")
+
 [connection signal="body_entered" from="KillZone" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Goal" to="Player" method="_on_goal_body_entered"]

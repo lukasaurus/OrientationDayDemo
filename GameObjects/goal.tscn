@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://qkbq3xwko3kp"]
+
+[ext_resource type="Texture2D" uid="uid://b0gy6x57ekvd3" path="res://Sprites/Objects/sign.png" id="1_vdmqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w68rg"]
+
+[node name="Goal" type="Area2D"]
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
+texture = ExtResource("1_vdmqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w68rg")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxbvk22h56jym"]
+
+[ext_resource type="Texture2D" uid="uid://chxll73l8r46i" path="res://Sprites/UI/unnamed.jpg" id="1_4n5bj"]
+[ext_resource type="FontFile" uid="uid://koyb6jcetu7j" path="res://Sprites/UI/Super Joyful.ttf" id="2_gqsqo"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Unnamed" type="Sprite2D" parent="."]
+position = Vector2(240, 117.000015)
+scale = Vector2(0.46777344, 0.46777344)
+texture = ExtResource("1_4n5bj")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.6156863)
+layout_mode = 0
+offset_left = 114.0
+offset_top = 163.0
+offset_right = 379.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("2_gqsqo")
+theme_override_font_sizes/font_size = 80
+text = "THE END"
