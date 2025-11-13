@@ -1,13 +1,10 @@
 extends CharacterBody2D
 class_name Player
-@export var speed = 300.0
-@export var jump_power = -300.0
-@export var acceleration = 5.0
+const SPEED = 300.0
+const JUMP_VELOCITY = -300.0
+const ACCELERATION = 5.0
 var jumps_remaining = 2
 
-var SPEED = speed * 100
-var JUMP_VELOCITY = -jump_power * 100
-var ACCELERATION = acceleration
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
