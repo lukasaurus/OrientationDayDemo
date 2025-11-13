@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://bg6egrlm8u2o5"]
+
+[ext_resource type="Script" uid="uid://chhl1878sugh" path="res://GameObjects/spikes.gd" id="1_7nt76"]
+[ext_resource type="Texture2D" uid="uid://2gekkf2eyxcq" path="res://Sprites/Enemies/saw.png" id="2_x8x6l"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b0dc7"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ganrb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adtc6"]
+atlas = ExtResource("2_x8x6l")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nv7vn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adtc6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sgy0l"]
+radius = 15.033297
+
+[node name="RigidBody2D" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_b0dc7")
+script = ExtResource("1_7nt76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ganrb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nv7vn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_sgy0l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
