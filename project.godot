@@ -25,6 +25,12 @@ window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 window/stretch/scale=2.0
 
+[file_customization]
+
+folder_colors={
+"res://Placeables/": "red"
+}
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
